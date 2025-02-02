@@ -11,3 +11,7 @@ One-click **FREE** deployment of your private OpenAI ChatGPT/Claude/Gemini/Groq/
 <!-- SHIELD GROUP -->
 
 </div>
+
+## References
+
+[Lobe Chat](https://github.com/lobehub/lobe-chat) - an open-source, modern-design AI chat framework.
