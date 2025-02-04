@@ -28,8 +28,7 @@
   "scripts": {
     "build": "next build",
     "build:analyze": "ANALYZE=true next build",
-    "postbuild": "npm run build-sitemap && npm run build-migrate-db",
-    "build-migrate-db": "bun run db:migrate",
+    "postbuild": "npm run build-sitemap",
     "build-sitemap": "tsx ./scripts/buildSitemapIndex/index.ts",
     "dev": "next dev --turbopack -p 3030",
     "docs:i18n": "lobe-i18n md && npm run lint:md && npm run lint:mdx",
