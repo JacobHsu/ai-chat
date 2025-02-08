@@ -57,8 +57,7 @@
     "workflow:cdn": "tsx ./scripts/cdnWorkflow/index.ts",
     "workflow:countCharters": "tsx scripts/countEnWord.ts",
     "workflow:docs": "tsx ./scripts/docsWorkflow/index.ts",
-    "workflow:i18n": "tsx ./scripts/i18nWorkflow/index.ts",
-    "workflow:readme": "tsx ./scripts/readmeWorkflow/index.ts"
+    "workflow:i18n": "tsx ./scripts/i18nWorkflow/index.ts"
   },
   "lint-staged": {
     "*.md": [
