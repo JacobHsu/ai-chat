@@ -54,7 +54,6 @@
     "test-server:coverage": "vitest run --config vitest.server.config.ts --coverage",
     "type-check": "tsc --noEmit",
     "webhook:ngrok": "ngrok http http://localhost:3011",
-    "workflow:cdn": "tsx ./scripts/cdnWorkflow/index.ts",
     "workflow:docs": "tsx ./scripts/docsWorkflow/index.ts",
     "workflow:i18n": "tsx ./scripts/i18nWorkflow/index.ts"
   },
