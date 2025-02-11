@@ -53,8 +53,7 @@
     "test-server": "vitest run --config vitest.server.config.ts",
     "test-server:coverage": "vitest run --config vitest.server.config.ts --coverage",
     "type-check": "tsc --noEmit",
-    "webhook:ngrok": "ngrok http http://localhost:3011",
-    "workflow:i18n": "tsx ./scripts/i18nWorkflow/index.ts"
+    "webhook:ngrok": "ngrok http http://localhost:3011"
   },
   "lint-staged": {
     "*.md": [
