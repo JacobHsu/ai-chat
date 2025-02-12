@@ -52,8 +52,7 @@
     "test-app:coverage": "vitest run --config vitest.config.ts  --coverage",
     "test-server": "vitest run --config vitest.server.config.ts",
     "test-server:coverage": "vitest run --config vitest.server.config.ts --coverage",
-    "type-check": "tsc --noEmit",
-    "webhook:ngrok": "ngrok http http://localhost:3011"
+    "type-check": "tsc --noEmit"
   },
   "lint-staged": {
     "*.md": [
