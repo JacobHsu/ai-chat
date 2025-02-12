@@ -42,8 +42,6 @@
     "lint:ts": "eslint \"{src,tests}/**/*.{js,jsx,ts,tsx}\" --fix",
     "prepare": "husky",
     "prettier": "prettier -c --write \"**/**\"",
-    "pull": "git pull",
-    "release": "semantic-release",
     "start": "next start -p 3210",
     "stylelint": "stylelint \"src/**/*.{js,jsx,ts,tsx}\" --fix",
     "test": "npm run test-app && npm run test-server",
