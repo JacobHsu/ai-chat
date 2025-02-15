@@ -33,7 +33,7 @@ export const getAppConfig = () => {
   return createEnv({
     client: {
       NEXT_PUBLIC_BASE_PATH: z.string(),
-      NEXT_PUBLIC_ENABLE_SENTRY: z.boolean(),
+      // NEXT_PUBLIC_ENABLE_SENTRY: z.boolean(),
     },
     server: {
       ACCESS_CODES: z.any(z.string()).optional(),
@@ -60,7 +60,7 @@ export const getAppConfig = () => {
       NEXT_PUBLIC_BASE_PATH: process.env.NEXT_PUBLIC_BASE_PATH || '',
 
       // Sentry
-      NEXT_PUBLIC_ENABLE_SENTRY: !!process.env.NEXT_PUBLIC_SENTRY_DSN,
+      // NEXT_PUBLIC_ENABLE_SENTRY: !!process.env.NEXT_PUBLIC_SENTRY_DSN,
 
       ACCESS_CODES: ACCESS_CODES as any,
 
