@@ -10,8 +10,7 @@ import { Center, Flexbox } from 'react-layout-kit';
 
 import GuideModal from '@/components/GuideModal';
 import GuideVideo from '@/components/GuideVideo';
-import { BRANDING_NAME } from '@/const/branding';
-import { GITHUB, GITHUB_ISSUES } from '@/const/url';
+import { GITHUB } from '@/const/url';
 import { featureFlagsSelectors, useServerConfigStore } from '@/store/serverConfig';
 import { isOnServerSide } from '@/utils/env';
 
@@ -25,7 +24,6 @@ const useStyles = createStyles(
 const Footer = memo<PropsWithChildren>(() => {
   const { t } = useTranslation('common');
   const [openStar, setOpenStar] = useState(false);
-  const [openFeedback, setOpenFeedback] = useState(false);
   const { styles } = useStyles();
 
   const { hideGitHub } = useServerConfigStore(featureFlagsSelectors);
@@ -53,18 +51,6 @@ const Footer = memo<PropsWithChildren>(() => {
             >
               {t('footer.action.star')}
             </Link>
-            {` ${t('footer.and')} `}
-            <Link
-              aria-label={'feedback'}
-              href={GITHUB_ISSUES}
-              onClick={(e) => {
-                e.preventDefault();
-                setOpenFeedback(true);
-              }}
-            >
-              {t('footer.action.feedback')}
-            </Link>
-            {' !'}
           </div>
         </Center>
       </Flexbox>
@@ -80,19 +66,6 @@ const Footer = memo<PropsWithChildren>(() => {
         }}
         open={openStar}
         title={t('footer.star.title')}
-      />
-      <GuideModal
-        cancelText={t('footer.later')}
-        cover={<GuideVideo height={269} src={'/videos/feedback.mp4?v=1'} width={358} />}
-        desc={t('footer.feedback.desc', { appName: BRANDING_NAME })}
-        okText={t('footer.feedback.action')}
-        onCancel={() => setOpenFeedback(false)}
-        onOk={() => {
-          if (isOnServerSide) return;
-          window.open(GITHUB_ISSUES, '__blank');
-        }}
-        open={openFeedback}
-        title={t('footer.feedback.title')}
       />
     </>
   );
